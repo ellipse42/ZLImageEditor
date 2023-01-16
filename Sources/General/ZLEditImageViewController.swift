@@ -350,7 +350,7 @@ open class ZLEditImageViewController: UIViewController {
     @objc public class func showClip(image: UIImage, editModel: ZLEditImageModel? = nil, completion: ( (UIImage) -> Void )? ) -> UIViewController  {
         let vc = ZLClipImageViewController(image: image, editRect: editModel?.editRect, angle: editModel?.angle ?? 0, selectRatio: editModel?.selectRatio)
         vc.clipDoneBlock = { (angle, editRect, ratio) in
-            completion?(image.zl.clipImage(angel: angle, editRect: editRect, isCircle: false) ?? image)
+            completion?(image.zl.clipImage(angle: angle, editRect: editRect, isCircle: false) ?? image)
         }
         vc.animateDismiss = true
         vc.modalPresentationStyle = .fullScreen
